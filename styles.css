@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 240px;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    width: 230px;
+    letter-spacing: 2px;
+    padding: 7px;
+    margin: auto;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.pick-five, .powerball {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#pick-five-numbers, #powerball-number {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.number {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 20px;
+    height: 20px;
+    padding: 7px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+.number.fade {
+    opacity: 0;
+}
+
+.number.show {
+    opacity: 1;
+}
+
+.number:hover {
+    transform: scale(1.1);
+}
+
+.powerball .number {
+    background-color: rgb(217, 83, 79);
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -2px 0px inset;
+    padding: 10px 20px;
+    font-size: 14px;
+    color:#333;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    background-color: #f8f8f8;
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+    letter-spacing: 3px;
+}
+
+
+button:hover {
+    /* background-color:rgb(217, 83, 79); */
+    /* color:#f3f3f3; */
+    box-shadow: none;
+}
+
+@media screen and (min-width: 501px) {
+
+h1 {
+    width: 300px;
+    letter-spacing: 6px;
+}
+
+.container {
+        width: fit-content;
+}
+
+ h2 {
+        font-size: 20px;
+}
+.number {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+}
